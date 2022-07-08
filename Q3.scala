@@ -8,7 +8,9 @@ object Q2{
 
 
 
-      b-=1;
+      b-=1 //increment and decrement in scala is invalid
+//So we take Increase and assignment operator
+// and Decrease and assignment operator
       printf("--b*a + c*d-- = %d\n",b*a + c*d);
       a+=1;
       printf("++a = %d\n",a);

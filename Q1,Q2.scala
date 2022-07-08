@@ -13,7 +13,9 @@ object Q1Q2{
       printf("n mod j = %d\n",n%j)
       printf("m/j*j = %d\n", m/j*j)
       printf("f + 10*5 + g = %.2f\n", f + 10*5 + g)
-      i=i+1
+      i+=1;  //increment and decrement in scala is invalid
+//So we take Increase and assignment operator
+// and Decrease and assignment operator
       printf("++i * n = %d", i * n )
 
   }
