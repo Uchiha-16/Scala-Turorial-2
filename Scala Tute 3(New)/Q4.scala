@@ -1,4 +1,4 @@
-object E3{
+object COST{
     def main(args: Array[String]): Unit = {
       var total:Double = (bookPrice(60) - discount(bookPrice(60)) + shippingCost(60))
       println("Total wholesale cost for 60 book: Rs." + total)
