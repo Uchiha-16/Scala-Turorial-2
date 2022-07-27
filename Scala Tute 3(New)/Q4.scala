@@ -5,7 +5,7 @@ object COST{
     }
 
 
-    def shippingCost(x:Int):Double = 3 * x+(x-50) *.75
+    def shippingCost(x:Int):Double = if(x>50) 3 * x+(x-50) *.75 else 3 * x
 
     def discount(amount:Double):Double = amount*.4
 

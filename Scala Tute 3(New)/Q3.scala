@@ -3,6 +3,6 @@ object  AREA{
       var r = 5.0
       println(volume(r))
   }
-  def volume(r:Double) = (4.0/3.0) * math.Pi * r * r * r
+  def volume(r:Double) = (4.0 / 3.0) * math.Pi * r * r * r
 
 }
