@@ -1,8 +1,13 @@
+import scala.io.StdIn._
+
 object Q1 {
     def main(args: Array[String]): Unit = {
-      var amount: Float = 1425462.05f
+      // var amount: Float = 1425462.05f
 
-      println("Amount of interest in a year:Rs.  " + interest(amount))
+      print("Enter Deposit Amount: ")
+      var amount = readFloat()
+      println("Amount of itheh depsoit in the year:Rs.  " + amount)
+      println("Amount of interest in the year:Rs.  " + interest(amount))
     }
     def interest(x: Float):Float = {
       if(x < 20000){

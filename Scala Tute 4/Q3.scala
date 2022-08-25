@@ -1,4 +1,4 @@
-import scala.io.StdIn._
+// import scala.io.StdIn._
 
 object Q3 {
 
@@ -9,7 +9,8 @@ object Q3 {
     println(formatNames("Benny", toUpper(_)))
     println(formatNames("Niroshan".substring(0,2), toUpper(_)) + formatNames("Niroshan".substring(2), toLower(_)))
     println(formatNames("Saman", toLower(_)))
-    println(formatNames("Kumara".substring(0,1), toUpper(_)) + formatNames("Kumara".substring(1,5), toLower(_)) + formatNames("Kumara".substring(5), toUpper(_)))
+    println(formatNames("Kumara".substring(0,1), toUpper(_)) + formatNames("Kumara".substring(1,5), toLower(_)) +
+    formatNames("Kumara".substring(5), toUpper(_)))
   }
 
   def toUpper(s: String): String = {
