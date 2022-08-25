@@ -1,12 +1,12 @@
 import scala.io.StdIn._
 
-object Q4{
+object Q6{
     def main(args: Array[String]): Unit = {
 
       print("Enter a Number to get the Fibonacci Sequence: ")
       var n=readInt()
 
-      println(fibonacciSequence(n))
+      fibonacciSequence(n)
     }
     def fibonacci(n:Int):Int= n match{
       case 0 => 0
@@ -16,7 +16,7 @@ object Q4{
 
     def fibonacciSequence(n:Int):Unit = {
 
-      if (n >= 0) fibonacciSequence(n-1)
+      if (n > 0) fibonacciSequence(n-1)
 
       println(fibonacci(n))
     }
