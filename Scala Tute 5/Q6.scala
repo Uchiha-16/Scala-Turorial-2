@@ -6,7 +6,7 @@ object Q6{
       print("Enter a Number to get the Fibonacci Sequence: ")
       var n=readInt()
 
-      fibonacciSequence(n)
+      fibonacciSequence(n-1)
     }
     def fibonacci(n:Int):Int= n match{
       case 0 => 0
