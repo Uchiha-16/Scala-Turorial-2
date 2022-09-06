@@ -1,46 +1,31 @@
+object Q1 extends App{
 
-object tutorial6 {
+  var alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
-    def main(args: Array[String]):Unit ={
+  val E = (c:Char,key:Int,a:String)=> a((a.indexOf(c.toUpper)+key)%a.size)
 
-        var encryption:String = cypher(alphabet, 10)(encrypt(_,_));
-        println(encryption);
-        var decryption:String = cypher(encryption, 10)(decrypt(_,_));
-        println(decryption);
+  def decrypt(char:Char, key:Int, a:String):Char = {
 
-    }
+      var index = a.indexOf(char.toUpper);
 
-    var alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+      if (index - key < 0) {
+          return a(25 - (((25 - index) + key) % a.size));
+      }
+      else {
+          return a(index - key);
+      }
 
-    def encrypt(char:Char, key:Int):Char = {
+  }
 
-        var index = alphabet.indexOf(char.toUpper);
 
-        if (index + key >= alphabet.length) {
-            return alphabet.charAt((index + key) % alphabet.length);
-        }
-        else {
-            return alphabet.charAt(index + key);
-        }
+  val cipher=(algo:(Char,Int,String)=> Char,s:String,key:Int,a:String)=>
+  s.map(algo(_,key,a))
 
-    }
+  var s = scala.io.StdIn.readLine("Enter String: ");
+  val ct=cipher(E,s,1,alphabet)
+  println(ct)
 
-    def decrypt(char:Char, key:Int):Char = {
-
-        var index = alphabet.indexOf(char.toUpper);
-
-        if (index - key < 0) {
-            return alphabet.charAt(25 - (((25 - index) + key) % alphabet.length) );
-        }
-        else {
-            return alphabet.charAt(index - key);
-        }
-
-    }
-
-    def cypher(string:String, key:Int)(crypt:(Char, Int) => Char):String = {
-        var output:String = string.map(crypt(_, key));
-        return output;
-    }
+  val pt=cipher(decrypt,ct,1,alphabet)
+  println(pt)
 
 }
