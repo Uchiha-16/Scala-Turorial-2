@@ -22,10 +22,11 @@ object Q1 extends App{
   s.map(algo(_,key,a))
 
   var s = scala.io.StdIn.readLine("Enter String: ");
-  val ct=cipher(E,s,1,alphabet)
+
+  val ct=cipher(E,s,10,alphabet)
   println(ct)
 
-  val pt=cipher(decrypt,ct,1,alphabet)
+  val pt=cipher(decrypt,ct,10,alphabet)
   println(pt)
 
 }
