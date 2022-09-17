@@ -9,7 +9,7 @@ class Rational(a:Int, b:Int){
 object Q1 extends App {
     print("Enter numerator: ")
     var x = scala.io.StdIn.readInt();
-    print("Enter denominator(cannot be < 0): ")
+    print("Enter denominator(cannot be <= 0): ")
     var y = scala.io.StdIn.readInt();
     var p = new Rational(x, y);
 
